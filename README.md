@@ -1,1 +1,1 @@
-# JS-Type-Ahead
+# JavaScript Type Ahead
