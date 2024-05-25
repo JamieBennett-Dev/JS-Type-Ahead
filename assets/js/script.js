@@ -1,5 +1,7 @@
+// json file for array of data
 const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
 
+// variable of cities
 const cities = [];
 fetch(endpoint)
   .then(blob => blob.json())
@@ -13,10 +15,12 @@ function findMatches(wordToMatch, cities) {
   });
 }
 
+// function in which commas separate numbers when necessary
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
+// function in which matches are displayed when letters match
 function displayMatches() {
     const matchArray = findMatches(this.value, cities);
     const html = matchArray.map(place => {
